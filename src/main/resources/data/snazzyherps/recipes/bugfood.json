@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:organics/bugfood_ingredients"
+    },
+    {
+      "tag": "forge:organics/bugfood_ingredients"
+    },
+    {
+      "tag": "forge:organics/bugfood_ingredients"
+    }
+  ],
+  "result": {
+    "item": "snazzyherps:bugfood",
+    "count": 2
+  }
+}

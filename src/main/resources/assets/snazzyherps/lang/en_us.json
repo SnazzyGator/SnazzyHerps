@@ -1,0 +1,25 @@
+{
+  "itemGroup.herps_tab": "Snazzy's Herpetology Mod",
+  "entity.snazzyherps.brownanole": "Cuban Brown Anole",
+  "item.snazzyherps.brownanole_spawnegg": "Cuban Brown Anole Spawn Egg",
+  "entity.snazzyherps.housegecko": "House Gecko",
+  "item.snazzyherps.housegecko_spawnegg": "House Gecko Spawn Egg",
+  "entity.snazzyherps.daygeckosmall": "Day Gecko",
+  "item.snazzyherps.daygeckosmall_spawnegg": "Small Day Gecko Spawn Egg",
+  "entity.snazzyherps.goldengecko": "Golden Gecko",
+  "item.snazzyherps.goldengecko_spawnegg": "Golden Gecko Spawn Egg",
+  "entity.snazzyherps.skink": "Skink",
+  "item.snazzyherps.skink_spawnegg": "Skink Spawn Egg",
+  "entity.snazzyherps.leopardgecko": "Leopard Gecko",
+  "item.snazzyherps.leopardgecko_spawnegg": "Leopard Gecko Spawn Egg",
+
+  "item.snazzyherps.foodfly": "Feeder Fly",
+  "item.snazzyherps.foodcricket": "Feeder Cricket",
+  "item.snazzyherps.fooddubia": "Feeder Dubia Roach",
+  "item.snazzyherps.foodmealworm": "Feeder Mealworm",
+  "item.snazzyherps.foodwaxworm": "Feeder Waxworm",
+  "item.snazzyherps.foodhornworm": "Feeder Hornworm",
+  "item.snazzyherps.bugfood": "Bug Feed",
+
+  "block.snazzyherps.critterkeeper": "Critter Keeper (WIP)"
+}

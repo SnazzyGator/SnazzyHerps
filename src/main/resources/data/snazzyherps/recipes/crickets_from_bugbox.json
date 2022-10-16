@@ -1,0 +1,15 @@
+{
+  "type": "snazzyherps:bugbox_breeding",
+  "ingredients": [
+    {
+      "item": "snazzyherps:foodcricket"
+    },
+    {
+      "item": "snazzyherps:bugfood"
+    }
+  ],
+  "result": {
+    "item": "snazzyherps:foodcricket",
+    "count": 3
+  }
+}

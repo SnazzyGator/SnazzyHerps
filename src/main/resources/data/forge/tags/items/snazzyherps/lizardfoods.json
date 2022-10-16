@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "snazzyherps:foodfly",
+    "snazzyherps:foodcricket",
+    "snazzyherps:foodmealworm",
+    "snazzyherps:fooddubia",
+    "snazzyherps:foodwaxworm",
+    "snazzyherps:foodhornworm",
+    "minecraft:sweet_berries"
+  ]
+}

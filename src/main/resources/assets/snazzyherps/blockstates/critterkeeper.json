@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "snazzyherps:block/critterkeeper" },
+    "facing=east": { "model": "snazzyherps:block/critterkeeper", "y": 90 },
+    "facing=south": { "model": "snazzyherps:block/critterkeeper", "y": 180 },
+    "facing=west": { "model": "snazzyherps:block/critterkeeper", "y": 270 }
+  }
+}
