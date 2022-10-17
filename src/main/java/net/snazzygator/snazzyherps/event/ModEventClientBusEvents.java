@@ -27,7 +27,13 @@ public class ModEventClientBusEvents {
         EntityRenderers.register(ModEntityTypes.LEOPARDGECKO.get(), LeopardGeckoRenderer::new);
         EntityRenderers.register(ModEntityTypes.TESTLEO.get(), TestLeoRenderer::new);
 
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRITTERKEEPER.get(), RenderType.cutout());
         MenuScreens.register(ModMenuTypes.BUGBOX_MENU.get(), BugBoxScreen::new);
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRITTERKEEPER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.TANKLIGHT_UVB.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.TANKLIGHT_BASKING.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.RIMLESS_TANKWALL.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.RIMMED_TANKWALL.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.TANKLID.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BARKHIDE.get(), RenderType.cutout());
     }
 }

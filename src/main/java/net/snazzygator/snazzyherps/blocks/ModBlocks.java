@@ -5,13 +5,15 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.snazzygator.snazzyherps.SnazzyHerps;
-import net.snazzygator.snazzyherps.blocks.custom.CritterKeeperBlock;
+import net.snazzygator.snazzyherps.blocks.custom.*;
 import net.snazzygator.snazzyherps.item.ModCreativeModeTab;
 import net.snazzygator.snazzyherps.item.ModItems;
 
@@ -23,6 +25,28 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> CRITTERKEEPER = registerBlock("critterkeeper",
             () -> new CritterKeeperBlock(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+
+    public static final RegistryObject<Block> TANKLIGHT_UVB = registerBlock("tanklight_uvb",
+            () -> new TanklightUvbBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .lightLevel((state) -> state.getValue(TanklightUvbBlock.CLICKED) ? 5 : 0)
+                    .sound(SoundType.LANTERN).noOcclusion()), ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> TANKLIGHT_BASKING = registerBlock("tanklight_basking",
+            () -> new TanklightBaskingBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .lightLevel((state) -> state.getValue(TanklightBaskingBlock.CLICKED) ? 15 : 0)
+                    .sound(SoundType.LANTERN).noOcclusion()), ModCreativeModeTab.HERPS_TAB);
+
+    public static final RegistryObject<Block> RIMLESS_TANKWALL = registerBlock("rimless_tankwall",
+            () -> new RimlessTankwallBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> RIMMED_TANKWALL = registerBlock("rimmed_tankwall",
+            () -> new RimlessTankwallBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> TANKLID = registerBlock("tanklid",
+            () -> new TankLidBlock(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> BARKHIDE = registerBlock("barkhide",
+            () -> new BarkHideBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()),
             ModCreativeModeTab.HERPS_TAB);
 
     /**BLOCKS ABOVE**/

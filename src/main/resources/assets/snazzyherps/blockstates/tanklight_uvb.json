@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "clicked=false,facing=north": { "model": "snazzyherps:block/tanklight_uvb_off" },
+    "clicked=true,facing=north": { "model": "snazzyherps:block/tanklight_uvb_on" },
+    "clicked=false,facing=east": { "model": "snazzyherps:block/tanklight_uvb_off", "y": 90 },
+    "clicked=true,facing=east": { "model": "snazzyherps:block/tanklight_uvb_on", "y": 90 },
+    "clicked=false,facing=south": { "model": "snazzyherps:block/tanklight_uvb_off", "y": 180 },
+    "clicked=true,facing=south": { "model": "snazzyherps:block/tanklight_uvb_on", "y": 180 },
+    "clicked=false,facing=west": { "model": "snazzyherps:block/tanklight_uvb_off", "y": 270 },
+    "clicked=true,facing=west": { "model": "snazzyherps:block/tanklight_uvb_on", "y": 270 }
+  }
+}

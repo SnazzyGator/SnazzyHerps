@@ -21,5 +21,11 @@
   "item.snazzyherps.foodhornworm": "Feeder Hornworm",
   "item.snazzyherps.bugfood": "Bug Feed",
 
-  "block.snazzyherps.critterkeeper": "Critter Keeper (WIP)"
+  "block.snazzyherps.critterkeeper": "Critter Keeper (WIP)",
+  "block.snazzyherps.tanklight_uvb": "UVB Light",
+  "block.snazzyherps.tanklight_basking": "Basking Light",
+  "block.snazzyherps.rimless_tankwall": "Rimless Tank Wall",
+  "block.snazzyherps.rimmed_tankwall": "Rimmed Tank Wall",
+  "block.snazzyherps.tanklid": "Tank Lid",
+  "block.snazzyherps.barkhide": "Oak Bark Hide"
 }

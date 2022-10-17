@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "facing=north": { "model": "snazzyherps:block/rimless_tankwall" },
+    "facing=east": { "model": "snazzyherps:block/rimless_tankwall", "y": 90 },
+    "facing=south": { "model": "snazzyherps:block/rimless_tankwall", "y": 180 },
+    "facing=west": { "model": "snazzyherps:block/rimless_tankwall", "y": 270 }
+
+  }
+}

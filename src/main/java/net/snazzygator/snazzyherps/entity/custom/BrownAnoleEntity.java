@@ -255,7 +255,7 @@ public class BrownAnoleEntity extends Animal implements IAnimatable {
 
     protected SoundEvent getHurtSound(DamageSource pDamageSource) { return SoundEvents.GENERIC_HURT;}
     protected SoundEvent getDeathSound() { return SoundEvents.GENERIC_DEATH;}
-    protected void playStepSound(BlockPos pos, BlockState blockIn) {this.playSound(SoundEvents.GRASS_STEP, 0.1F, 0.5F);}
+    protected void playStepSound(BlockPos pos, BlockState blockIn) {this.playSound(SoundEvents.GRASS_STEP, 0.1F, 2.0F);}
 
     protected float getSoundVolume() { return 0.1F; }
 
@@ -278,7 +278,7 @@ public class BrownAnoleEntity extends Animal implements IAnimatable {
 
                     this.ticksSinceEaten = 0;
                 } else if (this.ticksSinceEaten > 60 && this.random.nextFloat() < 0.1F) {
-                    this.playSound(this.getEatingSound(itemstack), 0.5F, 0.5F);
+                    this.playSound(this.getEatingSound(itemstack), 0.5F, 2.0F);
                     this.level.broadcastEntityEvent(this, (byte)45);
                 }
             }
@@ -292,7 +292,7 @@ public class BrownAnoleEntity extends Animal implements IAnimatable {
 
     protected void usePlayerItem(Player player, InteractionHand interactionHand, ItemStack itemStack) {
         if (this.isFood(itemStack)) {
-            this.playSound(this.getEatingSound(itemStack), 0.5F, 0.5F);
+            this.playSound(this.getEatingSound(itemStack), 0.5F, 2.0F);
         }
 
         super.usePlayerItem(player, interactionHand, itemStack);
@@ -318,7 +318,7 @@ public class BrownAnoleEntity extends Animal implements IAnimatable {
             ItemEntity itementity = new ItemEntity(this.level, this.getX() + this.getLookAngle().x, this.getY() + 1.0D, this.getZ() + this.getLookAngle().z, itemStack);
             itementity.setPickUpDelay(40);
             itementity.setThrower(this.getUUID());
-            this.playSound(SoundEvents.FOX_SPIT, 0.5F, 0.5F);
+            this.playSound(SoundEvents.FOX_SPIT, 0.5F, 2.0F);
             this.level.addFreshEntity(itementity);
         }
     }
