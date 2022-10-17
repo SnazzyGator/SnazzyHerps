@@ -8,6 +8,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.snazzygator.snazzyherps.SnazzyHerps;
 import net.snazzygator.snazzyherps.entity.ModEntityTypes;
+import net.snazzygator.snazzyherps.item.custom.BugFoodItem;
+import net.snazzygator.snazzyherps.item.custom.LizardCookieItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -46,7 +48,9 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.HERPS_TAB).food(ModFoods.FOODHORNWORM)));
 
     public static final RegistryObject<Item> BUGFOOD = ITEMS.register("bugfood",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.HERPS_TAB)));
+            () -> new BugFoodItem(new Item.Properties().tab(ModCreativeModeTab.HERPS_TAB)));
+    public static final RegistryObject<Item> LIZARD_COOKIE = ITEMS.register("lizard_cookie",
+            () -> new LizardCookieItem(new Item.Properties().tab(ModCreativeModeTab.HERPS_TAB).food(ModFoods.LIZARD_COOKIE)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

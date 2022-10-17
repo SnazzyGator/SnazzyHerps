@@ -35,5 +35,9 @@ public class ModEventClientBusEvents {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.RIMMED_TANKWALL.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.TANKLID.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BARKHIDE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BRANCH_OAK.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ROCKLEDGE_STONE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ROCKLEDGE_SMALL_STONE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GROUNDLOG_OAK.get(), RenderType.cutout());
     }
 }

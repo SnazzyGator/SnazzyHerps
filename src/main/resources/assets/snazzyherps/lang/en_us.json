@@ -19,7 +19,12 @@
   "item.snazzyherps.foodmealworm": "Feeder Mealworm",
   "item.snazzyherps.foodwaxworm": "Feeder Waxworm",
   "item.snazzyherps.foodhornworm": "Feeder Hornworm",
-  "item.snazzyherps.bugfood": "Bug Feed",
+  "item.snazzyherps.bugfood": "Bug Food",
+  "item.snazzyherps.lizard_cookie": "Lizard Cookie",
+  "tooltip.snazzyherps.bugfood.shift": "Press §eSHIFT§r for more Info!",
+  "tooltip.snazzyherps.bugfood": "Used as a weak bonemeal and for breeding insects in the bugbox.",
+  "tooltip.snazzyherps.lizardcookie": "Press §eSHIFT§r for more Info!",
+  "tooltip.snazzyherps.lizardcookie.shift": "Used for taming herps!",
 
   "block.snazzyherps.critterkeeper": "Critter Keeper (WIP)",
   "block.snazzyherps.tanklight_uvb": "UVB Light",
@@ -27,5 +32,9 @@
   "block.snazzyherps.rimless_tankwall": "Rimless Tank Wall",
   "block.snazzyherps.rimmed_tankwall": "Rimmed Tank Wall",
   "block.snazzyherps.tanklid": "Tank Lid",
-  "block.snazzyherps.barkhide": "Oak Bark Hide"
+  "block.snazzyherps.barkhide": "Oak Bark Hide",
+  "block.snazzyherps.branch_oak": "Oak Climbing Branch",
+  "block.snazzyherps.rockledge_stone": "Stone Rock Ledge",
+  "block.snazzyherps.rockledge_small_stone": "Small Stone Rock Ledge",
+  "block.snazzyherps.groundlog_oak": "Oak Ground Log"
 }

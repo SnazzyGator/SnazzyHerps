@@ -10,6 +10,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -20,10 +21,14 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.scores.Team;
+import net.minecraftforge.event.ForgeEventFactory;
 import net.snazzygator.snazzyherps.entity.ModEntityTypes;
+import net.snazzygator.snazzyherps.item.ModItems;
 import net.snazzygator.snazzyherps.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -38,7 +43,7 @@ import java.util.EnumSet;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class BaseSkinkEntity extends Animal implements IAnimatable {
+public class BaseSkinkEntity extends TamableAnimal implements IAnimatable {
     private AnimationFactory factory = new AnimationFactory(this);
 
     static final Predicate<ItemEntity> ALLOWED_ITEMS = (itemEntity) -> {
@@ -46,7 +51,7 @@ public class BaseSkinkEntity extends Animal implements IAnimatable {
     private static final int MIN_TICKS_BEFORE_EAT = 100;
     private int ticksSinceEaten;
 
-    public BaseSkinkEntity(EntityType<? extends Animal> entityType, Level level) {
+    public BaseSkinkEntity(EntityType<? extends TamableAnimal> entityType, Level level) {
         super(entityType, level);
         this.setCanPickUpLoot(true);
     }
@@ -58,7 +63,7 @@ public class BaseSkinkEntity extends Animal implements IAnimatable {
 
     /**ATTRIBUTES**/
     public static AttributeSupplier setAttributes() {
-        return Animal.createMobAttributes()
+        return TamableAnimal.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 3.0D)
                 .add(Attributes.ATTACK_DAMAGE, 0.1f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
@@ -69,7 +74,8 @@ public class BaseSkinkEntity extends Animal implements IAnimatable {
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new FloatGoal(this));
         this.goalSelector.addGoal(2, new PanicGoal(this, 1.25D));
-        this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, Player.class, 6.0F, 1.25D, 1.2D));
+        if (!this.isTame()) {
+            this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, Player.class, 6.0F, 1.25D, 1.25D));}
         this.goalSelector.addGoal(4, new BreedGoal(this, 1.0D));
         this.goalSelector.addGoal(5, new BaseSkinkEntity.HerpSearchForItemsGoal());
         this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 4.0F));
@@ -218,6 +224,66 @@ public class BaseSkinkEntity extends Animal implements IAnimatable {
     protected void playStepSound(BlockPos pos, BlockState blockIn) {this.playSound(SoundEvents.GRASS_STEP, 0.1F, 2.0F);}
 
     protected float getSoundVolume() { return 0.1F; }
+
+
+    /**TAMING**/
+    @Override
+    public InteractionResult mobInteract(Player player, InteractionHand hand) {
+        ItemStack itemstack = player.getItemInHand(hand);
+        Item item = itemstack.getItem();
+
+        Item itemForTaming = ModItems.LIZARD_COOKIE.get();
+
+        if(isFood(itemstack)) {
+            return super.mobInteract(player, hand);
+        }
+
+        if (item == itemForTaming && !isTame()) {
+            if (this.level.isClientSide) {
+                return InteractionResult.CONSUME;
+            } else {
+                if (!player.getAbilities().instabuild) {
+                    itemstack.shrink(1);
+                }
+
+                if (!ForgeEventFactory.onAnimalTame(this, player)) {
+                    if (!this.level.isClientSide) {
+                        super.tame(player);
+                        this.navigation.recomputePath();
+                        this.setTarget(null);
+                        this.level.broadcastEntityEvent(this, (byte)7);
+                    }
+                }
+
+                return InteractionResult.SUCCESS;
+            }
+        }
+
+        if (itemstack.getItem() == itemForTaming) {
+            return InteractionResult.PASS;
+        }
+
+        return super.mobInteract(player, hand);
+    }
+
+    @Override
+    public Team getTeam() {
+        return super.getTeam();
+    }
+
+    @Override
+    public void setTame(boolean tamed) {
+        super.setTame(tamed);
+        if (tamed) {
+            getAttribute(Attributes.MAX_HEALTH).setBaseValue(6.0D);
+            getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(0.1D);
+            getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue((double)0.15f);
+        } else {
+            getAttribute(Attributes.MAX_HEALTH).setBaseValue(6.0D);
+            getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(0.1D);
+            getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue((double)0.15f);
+        }
+    }
 
 
     /**ITEM PICKUP GOALS**/

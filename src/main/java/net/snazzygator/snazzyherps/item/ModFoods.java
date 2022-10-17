@@ -15,5 +15,7 @@ public class ModFoods {
             .nutrition(1).saturationMod(0.1F).fast().build();
     public static final FoodProperties FOODHORNWORM = (new FoodProperties.Builder())
             .nutrition(1).saturationMod(0.1F).fast().build();
+    public static final FoodProperties LIZARD_COOKIE = (new FoodProperties.Builder())
+            .nutrition(3).saturationMod(0.3F).fast().build();
 
 }

@@ -48,6 +48,18 @@ public class ModBlocks {
     public static final RegistryObject<Block> BARKHIDE = registerBlock("barkhide",
             () -> new BarkHideBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()),
             ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> BRANCH_OAK = registerBlock("branch_oak",
+            () -> new OakBranchBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKLEDGE_STONE = registerBlock("rockledge_stone",
+            () -> new RockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKLEDGE_SMALL_STONE = registerBlock("rockledge_small_stone",
+            () -> new SmallRockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> GROUNDLOG_OAK = registerBlock("groundlog_oak",
+            () -> new GroundLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
 
     /**BLOCKS ABOVE**/
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
