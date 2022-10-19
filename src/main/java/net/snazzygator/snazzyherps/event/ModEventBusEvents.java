@@ -23,6 +23,7 @@ public class ModEventBusEvents {
         event.put(ModEntityTypes.SKINK.get(), BaseSkinkEntity.setAttributes());
         event.put(ModEntityTypes.LEOPARDGECKO.get(), LeopardGeckoEntity.setAttributes());
         event.put(ModEntityTypes.TESTLEO.get(), TestLeoEntity.setAttributes());
+        event.put(ModEntityTypes.BEARDEDDRAGON.get(), TestLeoEntity.setAttributes());
     }
     @SubscribeEvent
     public static void registerRecipeTypes(final RegistryEvent.Register<RecipeSerializer<?>> event) {

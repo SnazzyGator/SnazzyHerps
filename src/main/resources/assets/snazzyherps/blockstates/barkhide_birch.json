@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "snazzyherps:block/barkhide_birch" },
+    "facing=east": { "model": "snazzyherps:block/barkhide_birch", "y": 90 },
+    "facing=south": { "model": "snazzyherps:block/barkhide_birch", "y": 180 },
+    "facing=west": { "model": "snazzyherps:block/barkhide_birch", "y": 270 }
+  }
+}

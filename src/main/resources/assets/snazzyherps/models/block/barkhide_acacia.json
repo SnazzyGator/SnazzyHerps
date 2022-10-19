@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "snazzyherps:block/enrichment/barkhide",
-		"particle": "snazzyherps:block/enrichment/barkhide"
+		"0": "snazzyherps:block/enrichment/barkhide_acacia",
+		"particle": "snazzyherps:block/enrichment/barkhide_acacia"
 	},
 	"elements": [
 		{

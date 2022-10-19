@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "snazzyherps:block/branch_darkoak" },
+    "facing=east": { "model": "snazzyherps:block/branch_darkoak", "y": 90 },
+    "facing=south": { "model": "snazzyherps:block/branch_darkoak", "y": 180 },
+    "facing=west": { "model": "snazzyherps:block/branch_darkoak", "y": 270 }
+  }
+}

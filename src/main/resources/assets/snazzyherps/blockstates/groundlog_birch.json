@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "snazzyherps:block/groundlog_birch" },
+    "facing=east": { "model": "snazzyherps:block/groundlog_birch", "y": 90 },
+    "facing=south": { "model": "snazzyherps:block/groundlog_birch", "y": 180 },
+    "facing=west": { "model": "snazzyherps:block/groundlog_birch", "y": 270 }
+  }
+}

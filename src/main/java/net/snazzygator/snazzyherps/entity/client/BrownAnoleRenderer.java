@@ -21,7 +21,7 @@ public class BrownAnoleRenderer extends GeoEntityRenderer<BrownAnoleEntity> {
 
     public BrownAnoleRenderer(EntityRendererProvider.Context renderManager) {
         super(renderManager, new BrownAnoleModel());
-        this.shadowRadius = 0.2f;
+        this.shadowRadius = 0.15f;
     }
 
     public ResourceLocation getTextureLocation(BrownAnoleEntity entity) {

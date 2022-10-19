@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "snazzyherps:block/rockhide_stone" },
+    "facing=east": { "model": "snazzyherps:block/rockhide_stone", "y": 90 },
+    "facing=south": { "model": "snazzyherps:block/rockhide_stone", "y": 180 },
+    "facing=west": { "model": "snazzyherps:block/rockhide_stone", "y": 270 }
+  }
+}

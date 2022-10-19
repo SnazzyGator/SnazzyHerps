@@ -21,6 +21,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.scores.Team;
@@ -70,8 +71,10 @@ public class TestLeoEntity extends TamableAnimal implements IAnimatable {
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new FloatGoal(this));
         this.goalSelector.addGoal(2, new PanicGoal(this, 1.25D));
+        if (this.isTame()) {
+            this.goalSelector.addGoal(3, new TemptGoal(this, 1.25D, Ingredient.of(ModItems.LIZARD_COOKIE.get()), false));}
         if (!this.isTame()) {
-        this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, Player.class, 6.0F, 1.25D, 1.25D));}
+            this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, Player.class, 6.0F, 1.25D, 1.25D));}
         this.goalSelector.addGoal(4, new BreedGoal(this, 1.0D));
         this.goalSelector.addGoal(5, new TestLeoEntity.HerpSearchForItemsGoal());
         this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 4.0F));

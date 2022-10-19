@@ -27,11 +27,14 @@ public class ModItems {
     public static final RegistryObject<Item> GOLDENGECKO_SPAWNEGG = ITEMS.register("goldengecko_spawnegg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.GOLDENGECKO, 0xE5D582, 0xF2BB19,
                     new Item.Properties().tab(ModCreativeModeTab.HERPS_TAB)));
-    public static final RegistryObject<Item> SKINK = ITEMS.register("skink_spawnegg",
+    public static final RegistryObject<Item> SKINK_SPAWNEGG = ITEMS.register("skink_spawnegg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.SKINK, 0x342F2D, 0x40D4FD,
                     new Item.Properties().tab(ModCreativeModeTab.HERPS_TAB)));
-    public static final RegistryObject<Item> LEOPARDGECKO = ITEMS.register("leopardgecko_spawnegg",
+    public static final RegistryObject<Item> LEOPARDGECKO_SPAWNEGG = ITEMS.register("leopardgecko_spawnegg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.LEOPARDGECKO, 0xE6C04F, 0x635734,
+                    new Item.Properties().tab(ModCreativeModeTab.HERPS_TAB)));
+    public static final RegistryObject<Item> BEARDEDDRAGON_SPAWNEGG = ITEMS.register("beardeddragon_spawnegg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.BEARDEDDRAGON, 0xBC9348, 0x97712B,
                     new Item.Properties().tab(ModCreativeModeTab.HERPS_TAB)));
 
     public static final RegistryObject<Item> FOODFLY = ITEMS.register("foodfly",

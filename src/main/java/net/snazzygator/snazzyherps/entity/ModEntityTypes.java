@@ -58,6 +58,12 @@ public class ModEntityTypes extends Mob{
                             .sized(0.4f, 0.4f)
                             .build(new ResourceLocation(SnazzyHerps.MOD_ID, "leopardgecko").toString()));
 
+    public static final RegistryObject<EntityType<BeardedDragonEntity>> BEARDEDDRAGON =
+            ENTITY_TYPES.register("beardeddragon",
+                    () -> EntityType.Builder.of(BeardedDragonEntity::new, MobCategory.CREATURE)
+                            .sized(0.4f, 0.4f)
+                            .build(new ResourceLocation(SnazzyHerps.MOD_ID, "beardeddragon").toString()));
+
     protected ModEntityTypes(EntityType<? extends Mob> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }

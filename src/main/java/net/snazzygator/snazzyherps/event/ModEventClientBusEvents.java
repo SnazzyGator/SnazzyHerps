@@ -26,18 +26,47 @@ public class ModEventClientBusEvents {
         EntityRenderers.register(ModEntityTypes.SKINK.get(), BaseSkinkRenderer::new);
         EntityRenderers.register(ModEntityTypes.LEOPARDGECKO.get(), LeopardGeckoRenderer::new);
         EntityRenderers.register(ModEntityTypes.TESTLEO.get(), TestLeoRenderer::new);
+        EntityRenderers.register(ModEntityTypes.BEARDEDDRAGON.get(), BeardedDragonRenderer::new);
 
         MenuScreens.register(ModMenuTypes.BUGBOX_MENU.get(), BugBoxScreen::new);
+
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRITTERKEEPER.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.TANKLIGHT_UVB.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.TANKLIGHT_BASKING.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.RIMLESS_TANKWALL.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.RIMMED_TANKWALL.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.TANKLID.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BARKHIDE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BARKHIDE_OAK.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BARKHIDE_BIRCH.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BARKHIDE_SPRUCE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BARKHIDE_JUNGLE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BARKHIDE_ACACIA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BARKHIDE_DARKOAK.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BRANCH_OAK.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BRANCH_BIRCH.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BRANCH_SPRUCE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BRANCH_JUNGLE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BRANCH_ACACIA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BRANCH_DARKOAK.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ROCKLEDGE_STONE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ROCKLEDGE_SMALL_STONE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GROUNDLOG_OAK.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GROUNDLOG_BIRCH.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GROUNDLOG_SPRUCE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GROUNDLOG_JUNGLE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GROUNDLOG_ACACIA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GROUNDLOG_DARKOAK.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WALLBRANCH_OAK.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WALLBRANCH_BIRCH.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WALLBRANCH_SPRUCE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WALLBRANCH_JUNGLE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WALLBRANCH_ACACIA.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WALLBRANCH_DARKOAK.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ROCKHIDE_STONE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ROCKHIDE_ANDESITE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ROCKHIDE_GRANITE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ROCKHIDE_DIORITE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ROCKHIDE_SANDSTONE.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ROCKHIDE_REDSANDSTONE.get(), RenderType.cutout());
     }
 }

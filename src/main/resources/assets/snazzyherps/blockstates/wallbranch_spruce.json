@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "snazzyherps:block/wallbranch_spruce" },
+    "facing=east": { "model": "snazzyherps:block/wallbranch_spruce", "y": 90 },
+    "facing=south": { "model": "snazzyherps:block/wallbranch_spruce", "y": 180 },
+    "facing=west": { "model": "snazzyherps:block/wallbranch_spruce", "y": 270 }
+  }
+}
