@@ -86,7 +86,50 @@ public class ModBlocks {
     public static final RegistryObject<Block> ROCKLEDGE_STONE = registerBlock("rockledge_stone",
             () -> new RockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
             ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKLEDGE_ANDESITE = registerBlock("rockledge_andesite",
+            () -> new RockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKLEDGE_GRANITE = registerBlock("rockledge_granite",
+            () -> new RockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKLEDGE_DIORITE = registerBlock("rockledge_diorite",
+            () -> new RockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKLEDGE_SANDSTONE = registerBlock("rockledge_sandstone",
+            () -> new RockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKLEDGE_REDSANDSTONE = registerBlock("rockledge_redsandstone",
+            () -> new RockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKLEDGE_COBBLESTONE = registerBlock("rockledge_cobblestone",
+            () -> new RockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKLEDGE_MOSSYCOBBLESTONE = registerBlock("rockledge_mossycobblestone",
+            () -> new RockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+
     public static final RegistryObject<Block> ROCKLEDGE_SMALL_STONE = registerBlock("rockledge_small_stone",
+            () -> new SmallRockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKLEDGE_SMALL_ANDESITE = registerBlock("rockledge_small_andesite",
+            () -> new SmallRockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKLEDGE_SMALL_GRANITE = registerBlock("rockledge_small_granite",
+            () -> new SmallRockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKLEDGE_SMALL_DIORITE = registerBlock("rockledge_small_diorite",
+            () -> new SmallRockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKLEDGE_SMALL_SANDSTONE = registerBlock("rockledge_small_sandstone",
+            () -> new SmallRockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKLEDGE_SMALL_REDSANDSTONE = registerBlock("rockledge_small_redsandstone",
+            () -> new SmallRockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKLEDGE_SMALL_COBBLESTONE = registerBlock("rockledge_small_cobblestone",
+            () -> new SmallRockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKLEDGE_SMALL_MOSSYCOBBLESTONE = registerBlock("rockledge_small_mossycobblestone",
             () -> new SmallRockledgeBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
             ModCreativeModeTab.HERPS_TAB);
 
@@ -129,22 +172,53 @@ public class ModBlocks {
             ModCreativeModeTab.HERPS_TAB);
 
     public static final RegistryObject<Block> ROCKHIDE_STONE = registerBlock("rockhide_stone",
-            () -> new RockHideBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()),
+            () -> new RockHideBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
             ModCreativeModeTab.HERPS_TAB);
     public static final RegistryObject<Block> ROCKHIDE_ANDESITE = registerBlock("rockhide_andesite",
-            () -> new RockHideBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()),
+            () -> new RockHideBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
             ModCreativeModeTab.HERPS_TAB);
     public static final RegistryObject<Block> ROCKHIDE_GRANITE = registerBlock("rockhide_granite",
-            () -> new RockHideBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()),
+            () -> new RockHideBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
             ModCreativeModeTab.HERPS_TAB);
     public static final RegistryObject<Block> ROCKHIDE_DIORITE = registerBlock("rockhide_diorite",
-            () -> new RockHideBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()),
+            () -> new RockHideBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
             ModCreativeModeTab.HERPS_TAB);
     public static final RegistryObject<Block> ROCKHIDE_SANDSTONE = registerBlock("rockhide_sandstone",
-            () -> new RockHideBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()),
+            () -> new RockHideBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
             ModCreativeModeTab.HERPS_TAB);
     public static final RegistryObject<Block> ROCKHIDE_REDSANDSTONE = registerBlock("rockhide_redsandstone",
-            () -> new RockHideBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion()),
+            () -> new RockHideBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKHIDE_COBBLESTONE = registerBlock("rockhide_cobblestone",
+            () -> new RockHideBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> ROCKHIDE_MOSSYCOBBLESTONE = registerBlock("rockhide_mossycobblestone",
+            () -> new RockHideBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+
+    public static final RegistryObject<Block> HEATROCK_STONE = registerBlock("heatrock_stone",
+            () -> new HeatRockBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> HEATROCK_ANDESITE = registerBlock("heatrock_andesite",
+            () -> new HeatRockBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> HEATROCK_GRANITE = registerBlock("heatrock_granite",
+            () -> new HeatRockBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> HEATROCK_DIORITE = registerBlock("heatrock_diorite",
+            () -> new HeatRockBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> HEATROCK_SANDSTONE = registerBlock("heatrock_sandstone",
+            () -> new HeatRockBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> HEATROCK_REDSANDSTONE = registerBlock("heatrock_redsandstone",
+            () -> new HeatRockBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> HEATROCK_COBBLESTONE = registerBlock("heatrock_cobblestone",
+            () -> new HeatRockBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
+            ModCreativeModeTab.HERPS_TAB);
+    public static final RegistryObject<Block> HEATROCK_MOSSYCOBBLESTONE = registerBlock("heatrock_mossycobblestone",
+            () -> new HeatRockBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()),
             ModCreativeModeTab.HERPS_TAB);
 
     /**BLOCKS ABOVE**/

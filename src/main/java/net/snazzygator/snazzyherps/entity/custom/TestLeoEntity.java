@@ -15,6 +15,7 @@ import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
@@ -71,16 +72,17 @@ public class TestLeoEntity extends TamableAnimal implements IAnimatable {
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new FloatGoal(this));
         this.goalSelector.addGoal(2, new PanicGoal(this, 1.25D));
-        if (this.isTame()) {
-            this.goalSelector.addGoal(3, new TemptGoal(this, 1.25D, Ingredient.of(ModItems.LIZARD_COOKIE.get()), false));}
         if (!this.isTame()) {
             this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, Player.class, 6.0F, 1.25D, 1.25D));}
+        if (this.isTame()) {
+            this.goalSelector.addGoal(3, new TemptGoal(this, 1.25D, Ingredient.of(ModTags.Items.LIZARDFOODS), false));}
         this.goalSelector.addGoal(4, new BreedGoal(this, 1.0D));
         this.goalSelector.addGoal(5, new TestLeoEntity.HerpSearchForItemsGoal());
         this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 4.0F));
         this.goalSelector.addGoal(7, new WaterAvoidingRandomStrollGoal(this, 0.8D));
         this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));
     }
+
 
     /**VARIANTS & SAVE DATA**/
 
@@ -264,6 +266,7 @@ public class TestLeoEntity extends TamableAnimal implements IAnimatable {
                         this.navigation.recomputePath();
                         this.setTarget(null);
                         this.level.broadcastEntityEvent(this, (byte)7);
+                        registerGoals();
                     }
                 }
 
@@ -288,13 +291,12 @@ public class TestLeoEntity extends TamableAnimal implements IAnimatable {
         super.setTame(tamed);
         if (tamed) {
             getAttribute(Attributes.MAX_HEALTH).setBaseValue(4.0D);
-            getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(0.1D);
-            getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue((double)0.15f);
         } else {
             getAttribute(Attributes.MAX_HEALTH).setBaseValue(2.0D);
-            getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(0.1D);
-            getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue((double)0.15f);
         }
+        getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(0.1D);
+        getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue((double)0.15f);
+        registerGoals();
     }
 
 

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "snazzyherps:block/heatrock_redsandstone" },
+    "facing=east": { "model": "snazzyherps:block/heatrock_redsandstone", "y": 90 },
+    "facing=south": { "model": "snazzyherps:block/heatrock_redsandstone", "y": 180 },
+    "facing=west": { "model": "snazzyherps:block/heatrock_redsandstone", "y": 270 }
+  }
+}

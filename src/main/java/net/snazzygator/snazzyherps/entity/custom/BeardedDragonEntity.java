@@ -16,7 +16,9 @@ import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.animal.PolarBear;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -40,6 +42,7 @@ import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 import java.util.EnumSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -72,10 +75,10 @@ public class BeardedDragonEntity extends TamableAnimal implements IAnimatable {
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new FloatGoal(this));
         this.goalSelector.addGoal(2, new PanicGoal(this, 1.4D));
-        if (this.isTame()) {
-            this.targetSelector.addGoal(3, new TemptGoal(this, 1.4D, Ingredient.of(ModItems.LIZARD_COOKIE.get()), false));}
         if (!this.isTame()) {
-            this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, Player.class, 6.0F, 1.4D, 1.4D));}
+            this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, Player.class, 6.0F, 1.25D, 1.25D));}
+        if (this.isTame()) {
+            this.goalSelector.addGoal(3, new TemptGoal(this, 1.25D, Ingredient.of(ModTags.Items.LIZARDFOODS), false));}
         this.goalSelector.addGoal(4, new BreedGoal(this, 1.0D));
         this.goalSelector.addGoal(5, new BeardedDragonEntity.HerpSearchForItemsGoal());
         this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 4.0F));
@@ -84,7 +87,6 @@ public class BeardedDragonEntity extends TamableAnimal implements IAnimatable {
     }
 
     /**VARIANTS & SAVE DATA**/
-
     public static String getVariantName(int variant) {
         return switch (variant) {
             case 1 -> "normal_lilac";
@@ -273,13 +275,12 @@ public class BeardedDragonEntity extends TamableAnimal implements IAnimatable {
         super.setTame(tamed);
         if (tamed) {
             getAttribute(Attributes.MAX_HEALTH).setBaseValue(6.0D);
-            getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(0.1D);
-            getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue((double)0.15f);
         } else {
             getAttribute(Attributes.MAX_HEALTH).setBaseValue(3.0D);
-            getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(0.1D);
-            getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue((double)0.15f);
         }
+        getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(0.1D);
+        getAttribute(Attributes.MOVEMENT_SPEED).setBaseValue((double)0.15f);
+        registerGoals();
     }
 
 
@@ -406,6 +407,4 @@ public class BeardedDragonEntity extends TamableAnimal implements IAnimatable {
             }
         }
     }
-
-
 }

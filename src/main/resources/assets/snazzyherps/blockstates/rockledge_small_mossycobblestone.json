@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "snazzyherps:block/rockledge_small_mossycobblestone" },
+    "facing=east": { "model": "snazzyherps:block/rockledge_small_mossycobblestone", "y": 90 },
+    "facing=south": { "model": "snazzyherps:block/rockledge_small_mossycobblestone", "y": 180 },
+    "facing=west": { "model": "snazzyherps:block/rockledge_small_mossycobblestone", "y": 270 }
+  }
+}
